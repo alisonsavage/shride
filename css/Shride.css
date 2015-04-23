@@ -1,0 +1,148 @@
+body {
+  background-color: #cccccc;
+  /*really light*/
+  
+  width: 90%;
+  color: black;
+  /*dark gray*/
+  
+  font-family: Lucida;
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+}
+header {
+  background-color: #739481;
+  /* med sea foam */
+  
+  font-family: Lucida;
+  width: 50%;
+  font-size: 26px;
+  line-height: 44px;
+  color: black;
+  padding: 3px;
+  text-align: center;
+}
+[data-role="header"] {
+  background-color: #739481;
+  font-size: 30px;
+  line-height: 36px;
+  color: black;
+  text-align: center !important;
+  padding-right: 38%;
+  font-family: Lucida;
+}
+[data-role="footer"] {
+  background-color: #6bc399;
+  font-size: 26px;
+  line-height: 44px;
+  color: black;
+  padding: 3px;
+  text-align: center;
+}
+header.secondary {
+  padding-left: 75px;
+  text-align: center;
+}
+h1 {
+  background-color: #739481;
+  /* med */
+  
+  font-family: Lucida;
+  font-size: 16px;
+  width: 100%;
+  line-height: 40px;
+  color: black;
+  padding: 3px;
+  font-family: Helvetica;
+  text-align: center !important;
+  vertical-align: left !important;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+ul li {
+  background-image: url(button.png);
+  background-repeat: no-repeat;
+  background-position: 0px center;
+  padding-left: 15px;
+}
+a:link {
+  background: #6bc399;
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  background: #6bc399;
+  text-decoration: none;
+  color: black;
+}
+#content {
+  padding: 3px;
+}
+p {
+  text-align: left;
+  line-height: 160%;
+}
+#main_nav ul {
+  background-color: #6bc399;
+  padding: 0;
+  font-weight: bold;
+}
+#main_nav li a {
+  background-color: #6bc399;
+  display: block;
+  margin: 6px;
+  padding: 9px;
+  border-radius: 10px;
+  /* rounded corners */
+  
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #666;
+  /* dark outline */
+}
+button.back {
+  /*These lines override the previous styling of buttons*/
+  
+  -webkit-border-image: url("back.png") 0 14 0 14 stretch;
+  width: 60px;
+  height: 30px;
+  /*These lines position the back button inside the header*/
+  
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  float: left;
+  background-color: #6bc399;
+}
+button.next {
+  background-color: #6bc399;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  /*set width and height for the button*/
+  
+  width: 60px;
+  height: 30px;
+  float: right;
+}
+button {
+  background-color: #6bc399;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*set width and height for the button*/
+  
+  width: 60px;
+  height: 30px;
+}

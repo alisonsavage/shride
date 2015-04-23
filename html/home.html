@@ -1,0 +1,49 @@
+<!-- home.html has the home login screen and the settings page. -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SHRIDE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/Shride.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <link href="glDatePicker.default.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <!-- home page for the app -->
+  <div data-role="page" id="home" data-theme="d">
+    <div data-role="header" data-position="inline">
+      <h1>SHRIDE</h1>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+
+      <a href="drive.html" data-role="button" data-mini="true">Give a Ride</a>
+      </br>
+      <a href="ride.html" data-role="button" data-mini="true">Looking for Ride</a>
+
+      </br>
+      <a href="manage.html" data-role="button" data-mini="true">Manage Rides</a>
+    </div>
+    </br>
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li> <a href="#home" data-icon="home">Home</a>
+            <li> <a href="#post" data-icon="gear">Settings</a>
+              <li> <a href="#search" data-icon="star">Logout</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
