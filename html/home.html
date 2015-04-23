@@ -36,6 +36,66 @@
       <div data-role="navbar">
         <ul>
           <li> <a href="#home" data-icon="home">Home</a>
+            <li> <a href="#settings" data-icon="gear">Settings</a>
+              <li> <a href="" data-icon="star">Logout</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Settings 1 -->
+
+  <div data-role="page" id="settings" data-theme="d">
+    <div data-role="header" data-position="inline">
+      <h1>SHRIDE</h1>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+
+      <label for="flip-1">
+        <strong>Test notifications</strong>
+      </label>
+      <select name="flip-1" id="flip-1" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+      </select>
+      </br>
+      <label for="flip-1">
+        <strong>Privacy</strong>
+      </label>
+      <select name="flip-1" id="flip-1" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+      </select>
+      </br>
+      <label for="flip-1">
+        <strong>Email Public</strong>
+      </label>
+      <select name="flip-1" id="flip-1" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+      </select>
+      </br>
+      <label for="flip-1">
+        <strong>Phone Number Public</strong>
+      </label>
+      <select name="flip-1" id="flip-1" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+      </select>
+
+
+      <a href="#profile" data-role="button" data-mini="true">Edit profile</a>
+
+      </br>
+      <a href="home.html" data-role="button" data-mini="true">Back to Home</a>
+    </div>
+    </br>
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li> <a href="#home" data-icon="home">Home</a>
             <li> <a href="#post" data-icon="gear">Settings</a>
               <li> <a href="#search" data-icon="star">Logout</a>
         </ul>
@@ -43,7 +103,231 @@
     </div>
   </div>
 
+  <!-- Settings 2 -->
 
-</body>
+
+  <div data-role="page" id="profile" data-theme="d">
+    <div data-role="header" data-position="inline">
+      <a href="#settings" data-role="button" data-mini="true">Back</a>
+      <h1>SHRIDE</h1>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+
+      <!-- Forms -->
+
+
+      <form method="get" action="Submitted.html" id="register" onsubmit="return validateForm();">
+
+        <!-- FORM FIELDS GO HERE -->
+        <label for="name">First Name:</label>
+        <!-- form errors <div class="error" id="name-error">First name is a required field.</div>  -->
+        <input type="text" name="name" id="name" value="Alison">
+
+        <label for="email">Last Name:</label>
+        <!-- form errors <div class="error" id="name-error">First name is a required field.</div>  -->
+        <input type="text" name="lastname" id="lastname" value="Savage">
+
+        <label for="dob">Wellesley Username:</label>
+        <!-- form errors <div class="error" id="name-error">First name is a required field.</div>  -->
+        <input type="email" name="email" id="email" value="asavage2">
+
+        <label for="pwd">Phone number:</label>
+        <!-- form errors <div class="error" id="name-error">First name is a required field.</div>  -->
+        <input type="tel" name="phone" id="phone">
+
+
+
+
+
+        <br />
+
+      </form>
+      Do you still:
+
+      <!-- this is for the drivers only -->
+      <div class="drive">
+
+        <tr>
+          <td>
+            <label for="flip-1">
+              <strong>Own a car?:</strong>
+            </label>
+            <select name="flip-1" id="carowner" data-role="slider">
+              <option value="off">Off</option>
+              <option value="on">On</option>
+            </select>
+
+            <div class="seats" style="display: none;">
+              <label for="categorySelect">
+                <strong>How many seats?:</strong>
+              </label>
+              <select name="categorySelect" id="categorySelect" name="categorySelect">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+              </select>
+
+            </div>
+
+          </td>
+          <td>
+            <label for="button">
+              <strong>Zipcar:</strong>
+            </label>
+            <select name="flip-1" id="button" class="ui-state-default ui-corner-all" data-role="slider">
+              <option value="off">Off</option>
+              <option value="on">On</option>
+            </select>
+          </td>
+        </tr>
+
+      </div>
+      <!--
+      <label for="flip-1">
+        <strong>rider?</strong>
+      </label>
+      <select name="flip-1" id="flip-1" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+      </select>
+      </br>
+      <label for="flip-1">
+        <strong>driver?</strong>
+      </label>
+      <select name="flip-1" id="drivebutton" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+      </select>
+      </br>
+      <div class="drive" style="display:none;">
+        <form id="contact" action="/contact" method="post">
+          <script language="JavaScript" type="text/javascript">
+          </script>
+          <div class="two-thirds column" id="main">
+            <fieldset>
+              <label for="categorySelect">
+                <strong>Seats</strong>
+                </br>
+              </label>
+              <select id="categorySelect" name="categorySelect">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+                <option value="six">6</option>
+              </select>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+-->
+      </br>
+      <a href="#create" data-role="button" data-mini="true">Next</a>
+    </div>
+    </br>
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li> <a href="#home" data-icon="home">Home</a>
+            <li> <a href="#settings" data-icon="gear">Settings</a>
+              <li> <a href="" data-icon="star">Logout</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Create profile -->
+
+
+  <body>
+    <!-- home page for the app -->
+    <div data-role="page" id="create" data-theme="d">
+      <div data-role="header" data-position="inline">
+
+        <a href="#profile" data-role="button" data-mini="true">Back</a>
+
+
+        <h1>SHRIDE</h1>
+      </div>
+      <!-- /header -->
+      <div data-role="content">
+
+        Edit your Shride Profile!
+
+        <P>
+          <img src="Savage_photo.png" width="200" alt="profile picture" />
+
+
+          <a href="#" data-role="button" data-mini="true" onClick="alert('Uploaded!');">Upload Profile Picture</a>
+          </br>
+
+          <form id="contact" action="/contact" method="post">
+            <script language="JavaScript" type="text/javascript">
+            </script>
+            <div class="two-thirds column" id="main">
+              <fieldset>
+                <label for="categorySelect">
+                  <strong>Preferred Pronouns:</strong>
+                  </br>
+                </label>
+                <select id="categorySelect" name="categorySelect">
+                  <option value="they/them/theirs">they/them/theirs</option>
+                  <option value="she/her/hers">she/her/hers</option>
+                  <option value="he/him/his">he/him/his</option>
+                </select>
+              </fieldset>
+            </div>
+          </form>
+
+          </br>
+          <a href="home.html" data-role="button" data-mini="true" onClick="alert('Changes saved!');">Save changes</a>
+
+
+      </div>
+      </br>
+      <div data-role="footer">
+        <div data-role="navbar">
+          <ul>
+            <li> <a href="#home" data-icon="home">Home</a>
+              <li> <a href="#settings" data-icon="gear">Settings</a>
+                <li> <a href="" data-icon="star">driver</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(function() {
+        $('#drivebutton').change(function() {
+          if ($('.drive').is(':visible')) {
+            $('.drive').hide();
+          } else {
+            $('.drive').show();
+          }
+
+
+        });
+      });
+
+      $(function() {
+        $('#carowner').change(function() {
+          if ($('.seats').is(':visible')) {
+            $('.seats').hide();
+          } else {
+            $('.seats').show();
+          }
+
+
+        });
+      });
+    </script>
+
+  </body>
 
 </html>

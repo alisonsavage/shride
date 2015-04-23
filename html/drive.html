@@ -87,9 +87,9 @@
     <div data-role="footer">
       <div data-role="navbar">
         <ul>
-          <li> <a href="#home" data-icon="home">Home</a>
-            <li> <a href="#gear" data-icon="gear">Settings</a>
-              <li> <a href="#star" data-icon="star">Logout</a>
+          <li> <a href="home.html" data-icon="home">Home</a>
+            <li> <a href="home.html#settings" data-icon="gear">Settings</a>
+              <li> <a href="index.html" data-icon="star">Logout</a>
         </ul>
       </div>
     </div>
@@ -121,7 +121,7 @@
 
       </br>
       <a href=#contact data-role="button" data-mini="true">Contact</a>
-      <a href="#join" data-role="button" data-mini="true">Join</a>
+      <a href="#join" data-role="button" data-mini="true" onclick="getConfirmation();">Join</a>
       </br>
 
       <ul data-role="listview">
@@ -151,9 +151,9 @@
     <div data-role="footer">
       <div data-role="navbar">
         <ul>
-          <li> <a href="#home" data-icon="home">Home</a>
-            <li> <a href="#gear" data-icon="gear">Settings</a>
-              <li> <a href="#star" data-icon="star">Logout</a>
+          <li> <a href="home.html" data-icon="home">Home</a>
+            <li> <a href="home.html#settings" data-icon="gear">Settings</a>
+              <li> <a href="index.html" data-icon="star">Logout</a>
         </ul>
       </div>
     </div>
@@ -180,9 +180,9 @@
     <div data-role="footer">
       <div data-role="navbar">
         <ul>
-          <li> <a href="#home" data-icon="home">Home</a>
-            <li> <a href="#gear" data-icon="gear">Settings</a>
-              <li> <a href="#star" data-icon="star">Logout</a>
+          <li> <a href="home.html" data-icon="home">Home</a>
+            <li> <a href="home.html#settings" data-icon="gear">Settings</a>
+              <li> <a href="index.html" data-icon="star">Logout</a>
         </ul>
       </div>
     </div>
@@ -205,9 +205,9 @@
     <div data-role="footer">
       <div data-role="navbar">
         <ul>
-          <li> <a href="#home" data-icon="home">Home</a>
-            <li> <a href="#gear" data-icon="gear">Settings</a>
-              <li> <a href="#star" data-icon="star">Logout</a>
+          <li> <a href="home.html" data-icon="home">Home</a>
+            <li> <a href="home.html#settings" data-icon="gear">Settings</a>
+              <li> <a href="index.html" data-icon="star">Logout</a>
         </ul>
       </div>
     </div>
@@ -425,3 +425,21 @@
   </div>
 
   <!-- END DRIVER PATH-->
+  <script type="text/javascript">
+    <!--
+    function getConfirmation() {
+        var retVal = confirm("Do you want to continue ?");
+        if (retVal == true) {
+          alert("Ok! We'll take you to confirmation screen.");
+          return true;
+        } else {
+          alert("Ok! We'll take you back.");
+          window.location.href = "drive.html";
+          return false;
+        }
+      }
+      //-->
+  </script>
+</body>
+
+</html>

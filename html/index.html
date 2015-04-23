@@ -110,10 +110,10 @@
                     </select>
                   </td>
                   <td>
-                    <label for="button">
+                    <label for="drivebutton">
                       <strong>Driver:</strong>
                     </label>
-                    <select name="flip-1" id="button" class="ui-state-default ui-corner-all" data-role="slider">
+                    <select name="flip-1" id="drivebutton" class="ui-state-default ui-corner-all" data-role="slider">
                       <option value="off">Off</option>
                       <option value="on">On</option>
                     </select>
@@ -121,6 +121,50 @@
                 </tr>
               </table>
             </div>
+
+            <!-- this is for the drivers only -->
+            <div class="drive" style="display: none;">
+
+              <tr>
+                <td>
+                  <label for="flip-1">
+                    <strong>Own a car?:</strong>
+                  </label>
+                  <select name="flip-1" id="carowner" data-role="slider">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                  </select>
+
+                  <div class="seats" style="display: none;">
+                    <label for="categorySelect">
+                      <strong>How many seats?:</strong>
+                    </label>
+                    <select name="categorySelect" id="categorySelect" name="categorySelect">
+                      <option value="one">1</option>
+                      <option value="two">2</option>
+                      <option value="three">3</option>
+                      <option value="four">4</option>
+                      <option value="five">5</option>
+                      <option value="six">6</option>
+                    </select>
+
+                  </div>
+
+                </td>
+                <td>
+                  <label for="button">
+                    <strong>Zipcar:</strong>
+                  </label>
+                  <select name="flip-1" id="button" class="ui-state-default ui-corner-all" data-role="slider">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                  </select>
+                </td>
+              </tr>
+
+            </div>
+
+
             <br>
             <div class="flipbuttons">
               <label for="flip-1">
@@ -189,65 +233,15 @@
         </div>
       </form>
       </br>
-      </br> <a href="#cardetails" data-role="button" data-mini="true">Next </a>
+      </br> <a href="#done" data-role="button" data-mini="true">Next </a>
     </div>
   </div>
 
-  <!-- this should only be for drivers -->
-
-  <div data-role="page" id="cardetails" data-theme="d">
-    <div data-role="header" data-position="inline">
-      <a href="#humandetails" data-role="button" data-mini="true">Back</a>
-      <h1>SHRIDE</h1>
-    </div>
-    <!-- /header -->
-    <div data-role="content">
-      <form id="new" action="/post" method="post">
-        <script language="JavaScript" type="text/javascript">
-        </script>
-        <div class="two-thirds column" id="main">
-          <fieldset>
-            <br>
-            <label for="flip-1">
-              <strong>Car details:</strong>
-            </label>
-            <br>
-            <div class="flipbuttons">
-              <table>
-                <tr>
-                  <td>
-                    <label for="flip-1">
-                      <strong>Own a car?:</strong>
-                    </label>
-                    <select name="flip-1" id="flip-1" data-role="slider">
-                      <option value="off">Off</option>
-                      <option value="on">On</option>
-                    </select>
-                  </td>
-                  <td>
-                    <label for="button">
-                      <strong>Zipcar:</strong>
-                    </label>
-                    <select name="flip-1" id="button" class="ui-state-default ui-corner-all" data-role="slider">
-                      <option value="off">Off</option>
-                      <option value="on">On</option>
-                    </select>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <br>
-
-          </fieldset>
-        </div>
-      </form> <a href="#done" data-role="button" data-mini="true">Next</a> </div>
-    </br>
-  </div>
   <!-- this is complete screen -->
   <div data-role="page" id="done" data-theme="d">
 
     <div data-role="header" data-position="inline">
-      <a href="#cardetails" data-role="button" data-mini="true">Back</a>
+      <a href="home.html" data-role="button" data-mini="true">Back</a>
       <h1>SHRIDE</h1>
     </div>
     <!-- /header -->
@@ -265,7 +259,31 @@
       </fieldset>
     </div>
   </div>
+  <script>
+    $(function() {
+      $('#drivebutton').change(function() {
+        if ($('.drive').is(':visible')) {
+          $('.drive').hide();
+        } else {
+          $('.drive').show();
+        }
 
+
+      });
+    });
+
+    $(function() {
+      $('#carowner').change(function() {
+        if ($('.seats').is(':visible')) {
+          $('.seats').hide();
+        } else {
+          $('.seats').show();
+        }
+
+
+      });
+    });
+  </script>
 </body>
 
 </html>
